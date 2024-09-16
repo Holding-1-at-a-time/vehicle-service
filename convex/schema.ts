@@ -5,13 +5,20 @@
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 
-export default defineSchema(
-  {
-    documents: defineTable({
-      fieldOne: v.string(),
-      fieldTwo: v.object({
-        subFieldOne: v.array(v.number()),
-      }),
+export default defineSchema({
+  users: defineTable({
+    _id: v.id('users'),
+    name: v.string(),
+    email: v.string(),
+    role: v.string(),
+    tenantId: v.id('tenants'),
+  }).index("by_email", ["email"]),
+
+  tenants: defineTable({
+    _id: v.id('tenants'),
+    name: v.string(),
+    plan: v.string(),
+  }),
     }),
     // This definition matches the example query and mutation code:
     numbers: defineTable({
