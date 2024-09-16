@@ -57,7 +57,11 @@
     "eslint-config-next": "15.0.0-rc.0",
     "jabber": "^1.5.3",
     "next": "15.0.0-rc.0",
+<<<<<<< HEAD
     "postcss": ">=8.4.31",
+=======
+    "postcss": "8.4.47",
+>>>>>>> 84513eac1ad2f59eb5b0119e55a42b21f9f09866
     "react": "19.0.0-rc-f2df5694-20240916",
     "react-day-picker": "^8.9.1",
     "react-dom": "19.0.0-rc-f2df5694-20240916",
